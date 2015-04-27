@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip" >
+
+        <TextView
+            android:id="@+id/cash_transaction_type"
+            style="@style/add_edit_transaction_style"
+            android:text="@string/Type" />
+
+        <RadioGroup
+            android:id="@+id/cash_transaction_choice"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8.0dip"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/cash_type_deposite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:checked="true"
+                android:text="Deposite"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/cash_type_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Withdraw"
+                android:textSize="15sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip" >
+
+        <TextView
+            android:id="@+id/cash_amount"
+            style="@style/add_edit_transaction_style"
+            android:text="Amount:" />
+
+        <EditText
+            android:id="@+id/cash_amount_box"
+            style="@style/add_edit_transaction_edit_text_style"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip" >
+
+        <TextView
+            android:id="@+id/cashTransactionDate"
+            style="@style/add_edit_transaction_style"
+            android:text="@string/Date" />
+
+        <EditText
+            android:id="@+id/cash_datepicker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/cash_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/cash_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

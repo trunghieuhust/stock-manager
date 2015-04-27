@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/portfolio_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.5dip"
+        android:orientation="horizontal"
+        android:weightSum="11" >
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="left"
+            android:text="@string/stock"
+            android:textColor="#ff33b5e5"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/shares"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/shares"
+            android:textColor="#ff33b5e5"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/currentPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="@string/currentPrice"
+            android:textColor="#ff33b5e5"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/portfolio_statistics"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/portfolioStatisticHeader"
+            style="@style/sub_header_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_section_divider_holo_custom"
+            android:text="@string/portfolioStatisticLabel"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ff33b5e5" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="11" >
+
+            <TextView
+                android:id="@+id/portfolioGain"
+                style="@style/portfolio_statistic_style"
+                android:layout_weight="3"
+                android:text="@string/portfolioGain" />
+
+            <TextView
+                android:id="@+id/portfolioGainPercent"
+                style="@style/portfolio_statistic_style"
+                android:layout_weight="2"
+                android:text="@string/portfolioGainPercent" />
+
+            
+
+            <TextView
+                android:id="@+id/portfolioCostBasic"
+                style="@style/portfolio_statistic_style"
+                android:layout_weight="3"
+                android:text="@string/portfolioCostBasic" />
+
+            <TextView
+                android:id="@+id/portfolioMktValue"
+                style="@style/portfolio_statistic_style"
+                android:layout_weight="3"
+                android:text="@string/portfolioMktValue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:weightSum="11" >
+
+            <TextView
+                android:id="@+id/portfolioGainDetail"
+                style="@style/porfolio_statistic_detail_style"
+                android:layout_weight="3"
+                android:text="120" />
+
+            <TextView
+                android:id="@+id/portfolioGainPercentDetail"
+                style="@style/porfolio_statistic_detail_style"
+                android:layout_weight="2"
+                android:text="2.5%" />
+
+            <TextView
+                android:id="@+id/portfolioCostBasicDetail"
+                style="@style/porfolio_statistic_detail_style"
+                android:layout_weight="3"
+                android:text="1250" />
+
+            <TextView
+                android:id="@+id/portfolioMktValueDetail"
+                style="@style/porfolio_statistic_detail_style"
+                android:layout_weight="3"
+                android:text="12.5B" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/portfolio_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/portfolio_statistics"
+        android:layout_below="@id/portfolio_title" >
+    </ListView>
+
+</RelativeLayout>

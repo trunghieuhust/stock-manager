@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="spinner_label">#ff33b5e5</color>
+    <color name="dialog_title_text_color">#ffffffff</color>
+    <color name="widget_red">#88fc023e</color>
+    <color name="widget_green">#8883de17</color>
+
+</resources>

@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/stock_details_lastTradedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/zero"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/stock_details_perfomanceText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6.0dip"
+                    android:text="@string/zero"
+                    android:textColor="#ff33ff33" />
+
+                <TextView
+                    android:id="@+id/stock_details_lastPriceTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6.0dip"
+                    android:singleLine="true"
+                    android:text="@string/zero"
+                    android:textSize="10.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stock_details_after_hours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="10.0sp"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100.0" >
+
+            <TableRow
+                android:gravity="center_vertical"
+                android:minHeight="22.0dip" >
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_open" />
+
+                <TextView
+                    android:id="@+id/stock_details_openText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_div_yield" />
+
+                <TextView
+                    android:id="@+id/stock_details_divyieldText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_vertical"
+                android:minHeight="22.0dip" >
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_low" />
+
+                <TextView
+                    android:id="@+id/stock_details_lowText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_52week_low" />
+
+                <TextView
+                    android:id="@+id/stock_details_low_52weekText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_vertical"
+                android:minHeight="22.0dip" >
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_high" />
+
+                <TextView
+                    android:id="@+id/stock_details_highText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_52week_high" />
+
+                <TextView
+                    android:id="@+id/stock_details_high_52weekText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_vertical"
+                android:minHeight="22.0dip" >
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_volume" />
+
+                <TextView
+                    android:id="@+id/stock_details_volumeText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_avg_vol" />
+
+                <TextView
+                    android:id="@+id/stock_details_avg_vol"
+                    style="@style/detail_param_value"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_vertical"
+                android:minHeight="22.0dip" >
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_shares" />
+
+                <TextView
+                    android:id="@+id/stock_details_shares"
+                    style="@style/detail_param_value"
+                    android:text="" />
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_mktcap" />
+
+                <TextView
+                    android:id="@+id/stock_details_mktcapText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_vertical"
+                android:minHeight="22.0dip" >
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_eps" />
+
+                <TextView
+                    android:id="@+id/stock_details_epsText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_p_e" />
+
+                <TextView
+                    android:id="@+id/stock_details_peText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_vertical"
+                android:minHeight="22.0dip" >
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_beta" />
+
+                <TextView
+                    android:id="@+id/stock_details_betaText"
+                    style="@style/detail_param_value"
+                    android:text="" />
+
+                <TextView
+                    style="@style/detail_param_label"
+                    android:text="@string/stock_detail_delay" />
+
+                <TextView
+                    android:id="@+id/stock_details_delay"
+                    style="@style/detail_param_value"
+                    android:text="" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.0dip"
+                android:layout_marginRight="4.0dip"
+                android:background="@drawable/list_section_divider_holo_custom"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/detail_btn_prev_chart"
+                    style="@style/header_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?actionBarItemBackground"
+                    android:minHeight="32.0dip"
+                    android:minWidth="52.0dip"
+                    android:paddingLeft="4.0dip"
+                    android:text="@string/stock_detail_prev" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="bottom|center" >
+
+                    <Button
+                        android:id="@+id/detail_text_chart_title"
+                        style="@style/header_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?actionBarItemBackground"
+                        android:minHeight="32.0dip"
+                        android:minWidth="52.0dip"
+                        android:text="@string/stock_detail_chart" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/detail_btn_next_chart"
+                    style="@style/header_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?actionBarItemBackground"
+                    android:minHeight="32.0dip"
+                    android:minWidth="52.0dip"
+                    android:paddingRight="4.0dip"
+                    android:text="@string/stock_detail_next" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/stock_details_imageChart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="false"
+                android:contentDescription="@string/stock_detail_content_chart"
+                android:padding="4.0dip"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/stock_details_progressBar_loadchart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ProgressBar
+                    android:id="@+id/stock_detail_progressbar"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/stock_detail_chart_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/stock_detail_chart" >
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/header_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/stock_detail_transaction_statistics_label" />
+
+        <LinearLayout
+            android:id="@+id/stock_details_transaction_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/stock_details_transaction_general"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+
+                <LinearLayout
+                    android:id="@+id/stock_details_transaction_general_shares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/sub_header_label"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/stock_detail_transaction_statistics_general_share" />
+
+                    <TextView
+                        android:id="@+id/stock_details_transaction_general_share_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/empty_string" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stock_details_transaction_general_avg_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/sub_header_label"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/stock_detail_transaction_statistics_general_avg_price" />
+
+                    <TextView
+                        android:id="@+id/stock_details_transaction_general_avg_price_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/empty_string" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stock_details_transaction_general_annual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/sub_header_label"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/stock_detail_transaction_statistics_general_annual" />
+
+                    <TextView
+                        android:id="@+id/stock_details_transaction_general_annual_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/empty_string" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stock_details_transaction_general_annual_perc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/sub_header_label"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="@string/stock_detail_transaction_statistics_general_annual_perc" />
+
+                    <TextView
+                        android:id="@+id/stock_details_transaction_general_annual_perc_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4.0dip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/empty_string" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/header_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/stock_detail_transaction_list_title" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stock_details_transaction_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5.0dip"
+            android:text="@string/stock_detail_transaction_empty"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/stock_details_transaction_detail_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10" >
+
+            <TextView
+                style="@style/sub_header_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4.0dip"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal"
+                android:text="@string/stock_detail_transaction_list_date_title" />
+
+            <TextView
+                style="@style/sub_header_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4.0dip"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal"
+                android:text="@string/stock_detail_transaction_list_price_title" />
+
+            <TextView
+                style="@style/sub_header_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4.0dip"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal"
+                android:text="@string/stock_detail_transaction_list_shares_title" />
+
+            <TextView
+                style="@style/sub_header_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4.0dip"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal"
+                android:text="@string/stock_detail_transaction_list_profit_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stock_detail_transaction_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/stock_detail_transaction_list"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:drawSelectorOnTop="false" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/stock_detail_total_profit_header"
+                style="@style/sub_header_label"
+                android:layout_width="0.0dip"
+                android:layout_weight="7.5"
+                android:gravity="left"
+                android:visibility="gone"
+                android:text="Total Profit:" />
+
+            <TextView
+                android:id="@+id/stock_detail_total_profit"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/sub_header_label"
+                android:layout_width="0.0dip"
+                android:layout_weight="7.5"
+                android:gravity="left"
+                
+                android:text="" />
+
+            <TextView
+                android:id="@+id/stock_detail_total_profit_percent"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ffffffff" />            
+        </LinearLayout>
+
+        <TextView
+            style="@style/header_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.0dip"
+            android:gravity="left"
+            android:text="@string/stock_detail_news" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/stock_detail_news_progressbar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/stock_details_news_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:drawSelectorOnTop="false" >
+            </ListView>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/stock_details_newslist_loading"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="2.0dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/stock_details_newslist_more"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:minHeight="30.0dip"
+            android:text="@string/stock_detail_load_more_news"
+            android:textColor="@color/spinner_label"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/stock_details_noteslist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginRight="4.0dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/stock_notes_preview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:clickable="true"
+                android:gravity="left"
+                android:minHeight="50.0dip"
+                android:textIsSelectable="false"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

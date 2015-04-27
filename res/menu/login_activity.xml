@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/login_option"
+        android:orderInCategory="0"
+        android:showAsAction="ifRoom"
+        android:title="@string/title_option">
+        <menu>
+            <item
+                android:id="@+id/login_option_forgot_password"
+                android:title="@string/title_forgot_password"/>
+            <item
+                android:id="@+id/login_option_help"
+                android:title="@string/title_help"/>
+            <item
+                android:id="@+id/login_option_about"
+                android:title="@string/title_about"/>
+        </menu>
+    </item>
+
+</menu>

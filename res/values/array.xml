@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu_list">
+        <item>Overview</item>
+        <item>Portfolio</item>
+        <item>Transaction</item>
+    </string-array>
+
+</resources>

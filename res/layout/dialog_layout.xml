@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/dialog_title_dark"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:minHeight="70.0dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dialog_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:paddingTop="10.0dip"
+            android:textColor="@color/dialog_title_text_color"
+            android:textSize="18.0sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/dialog_setview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/dialog_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#00000000"
+            android:dividerHeight="0.0dp"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="true"
+            android:listSelector="?actionBarItemBackground"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialog_btn_msg_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="2.0px"
+        android:background="@drawable/list_divider_holo_dark"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/dialog_btn_confirm"
+            style="@style/dialog_btn_style" />
+
+        <View
+            android:id="@+id/dialog_btn_middle_divider"
+            style="@style/dialog_btn_divider" />
+
+        <Button
+            android:id="@+id/dialog_btn_middle"
+            style="@style/dialog_btn_style" />
+
+        <View
+            android:id="@+id/dialog_btn_cancel_divider"
+            style="@style/dialog_btn_divider" />
+
+        <Button
+            android:id="@+id/dialog_btn_cancel"
+            style="@style/dialog_btn_style" />
+    </LinearLayout>
+
+</LinearLayout>
